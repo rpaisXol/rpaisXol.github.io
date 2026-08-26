@@ -3,7 +3,7 @@ title: Home
 
 # rpaisXol Portfolio
 
-Quartz 5와 Obsidian을 이용한 개발 포트폴리오입니다.
+Quartz 5와 Obsidian을 이용한 개발 포트폴리오 작성하기
 
 ## Categories
 
