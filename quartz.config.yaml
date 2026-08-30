@@ -1,50 +1,82 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+
 configuration:
+  # =========================================================
+  # Site
+  # =========================================================
   pageTitle: RpaisX
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
+
   analytics:
     provider: plausible
+
   locale: ko-KR
-  baseUrl: rpaisXol.github.io
+  baseUrl: rpaisxol.github.io
+
   ignorePatterns:
     - private
     - templates
     - .obsidian
+
+  # =========================================================
+  # Theme
+  # =========================================================
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
-    # typography:
-    #   header: Schibsted Grotesk
-    #   body: Source Sans Pro
-    #   code: IBM Plex Mono
+
     typography:
-      header: Inter
-      body: Inter
+      header: IBM Plex Sans KR
+      body: IBM Plex Sans KR
       code: JetBrains Mono
+
     colors:
+      # -----------------------------------------------------
+      # Light Mode
+      # GitHub Docs / Modern Developer Documentation
+      # -----------------------------------------------------
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#ffffff"
+        lightgray: "#f3f4f6"
+        gray: "#9ca3af"
+        darkgray: "#4b5563"
+        dark: "#111827"
+
+        secondary: "#2563eb"
+        tertiary: "#4f46e5"
+
+        highlight: rgba(37, 99, 235, 0.08)
+        textHighlight: "#fef3c7"
+
+      # -----------------------------------------------------
+      # Dark Mode
+      # GitHub Dark-inspired
+      # -----------------------------------------------------
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0d1117"
+        lightgray: "#21262d"
+        gray: "#8b949e"
+        darkgray: "#c9d1d9"
+        dark: "#f0f6fc"
+
+        secondary: "#58a6ff"
+        tertiary: "#818cf8"
+
+        highlight: rgba(88, 166, 255, 0.10)
+        textHighlight: "#6e5a00"
+
+
+# ===========================================================
+# Plugins
+# ===========================================================
 plugins:
+
+  # =========================================================
+  # Markdown / Metadata
+  # =========================================================
+
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
@@ -54,6 +86,12 @@ plugins:
         - git
         - filesystem
     order: 10
+
+
+  # =========================================================
+  # Code Highlighting
+  # =========================================================
+
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
     options:
@@ -62,153 +100,343 @@ plugins:
         dark: github-dark
       keepBackground: false
     order: 20
+
+
+  # =========================================================
+  # Markdown Support
+  # =========================================================
+
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
     options:
       enableInHtmlEmbed: false
       enableCheckbox: true
     order: 30
+
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
     order: 40
+
+
+  # =========================================================
+  # Table of Contents
+  # 오른쪽 Sidebar
+  # =========================================================
+
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 50
     layout:
       position: right
       priority: 30
+
+
+  # =========================================================
+  # Links
+  # =========================================================
+
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
       markdownLinkResolution: shortest
     order: 60
+
+
+  # =========================================================
+  # Description
+  # =========================================================
+
   - source: "@quartz-community/description"
     enabled: true
     order: 70
+
+
+  # =========================================================
+  # LaTeX
+  # =========================================================
+
   - source: "@quartz-community/latex"
     enabled: true
     options:
       renderEngine: katex
     order: 80
+
+
+  # =========================================================
+  # Optional Markdown Plugins
+  # =========================================================
+
   - source: "@quartz-community/citations"
     enabled: false
     order: 85
+
   - source: "@quartz-community/hard-line-breaks"
     enabled: false
     order: 90
+
   - source: "@quartz-community/ox-hugo"
     enabled: false
     order: 91
+
   - source: "@quartz-community/roam"
     enabled: false
     order: 92
+
+
+  # =========================================================
+  # Fonts
+  # =========================================================
+
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+
+
+  # =========================================================
+  # External Theme
+  # 기본 Quartz Theme 사용
+  # =========================================================
+
   - source: "@quartz-themes/core"
     enabled: false
     options:
       theme: tokyo-night
       mode: both
+
+
+  # =========================================================
+  # Publication Controls
+  # =========================================================
+
   - source: "@quartz-community/remove-draft"
     enabled: true
+
   - source: "@quartz-community/explicit-publish"
     enabled: false
+
   - source: "@quartz-community/unlisted-pages"
     enabled: true
     options: {}
     order: 45
+
   - source: "@quartz-community/encrypted-pages"
     enabled: false
+
+
+  # =========================================================
+  # Stacked Pages
+  # =========================================================
+
   - source: "@quartz-community/stacked-pages"
     enabled: false
     layout:
       position: afterBody
       priority: 50
       display: all
+
+
+  # =========================================================
+  # Redirect
+  # =========================================================
+
   - source: "@quartz-community/alias-redirects"
     enabled: true
+
+
+  # =========================================================
+  # RSS / Sitemap
+  # =========================================================
+
   - source: "@quartz-community/content-index"
     enabled: true
     options:
       enableSiteMap: true
       enableRSS: true
+
+
+  # =========================================================
+  # Site Metadata
+  # =========================================================
+
   - source: "@quartz-community/favicon"
     enabled: true
+
   - source: "@quartz-community/og-image"
     enabled: true
+
+  # github.io 주소 사용이므로 Custom CNAME은 사용하지 않음
   - source: "@quartz-community/cname"
-    enabled: true
+    enabled: false
+
+
+  # =========================================================
+  # Page Types
+  # =========================================================
+
   - source: "@quartz-community/canvas-page"
     enabled: true
+
   - source: "@quartz-community/content-page"
     enabled: true
+
   - source: "@quartz-community/folder-page"
     enabled: true
+
   - source: "@quartz-community/tag-page"
     enabled: true
+
+
+  # =========================================================
+  # Explorer
+  #
+  # 왼쪽 Sidebar의 핵심 Navigation
+  # =========================================================
+
   - source: "@quartz-community/explorer"
     enabled: true
+
+    options:
+      title: Explorer
+      folderClickBehavior: collapse
+      folderDefaultState: collapsed
+      useSavedState: true
+
     layout:
       position: left
       priority: 50
+
+
+  # =========================================================
+  # Graph
+  #
+  # 오른쪽 최상단
+  # =========================================================
+
   - source: "@quartz-community/graph"
     enabled: true
     layout:
       position: right
       priority: 10
+
+
+  # =========================================================
+  # Search
+  #
+  # Explorer 바로 위
+  # =========================================================
+
   - source: "@quartz-community/search"
     enabled: true
     layout:
       position: left
-      priority: 20
-      group: toolbar
-      groupOptions:
-        grow: true
+      priority: 40
+
+
+  # =========================================================
+  # Backlinks
+  # =========================================================
+
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
       position: right
       priority: 50
+
+
+  # =========================================================
+  # Article Header
+  # =========================================================
+
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
       position: beforeBody
       priority: 10
+
+
+  # =========================================================
+  # Date / Reading Metadata
+  # =========================================================
+
   - source: "@quartz-community/content-meta"
     enabled: true
     layout:
       position: beforeBody
       priority: 20
+
+
+  # =========================================================
+  # Tags
+  #
+  # 기술 블로그에서는 글 상단 Tag 노출
+  # =========================================================
+
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
+
+
+  # =========================================================
+  # Site Title
+  # =========================================================
+
   - source: "@quartz-community/page-title"
     enabled: true
     layout:
       position: left
       priority: 10
+
+
+  # =========================================================
+  # Dark Mode
+  #
+  # 작은 toolbar 그룹
+  # =========================================================
+
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
       position: left
       priority: 30
       group: toolbar
+
+
+  # =========================================================
+  # Reader Mode
+  # =========================================================
+
   - source: "@quartz-community/reader-mode"
     enabled: true
     layout:
       position: left
       priority: 35
       group: toolbar
+
+
+  # =========================================================
+  # Breadcrumb
+  #
+  # 홈에서는 숨김
+  # =========================================================
+
   - source: "@quartz-community/breadcrumbs"
     enabled: true
     layout:
       position: beforeBody
       priority: 5
       condition: not-index
+
+
+  # =========================================================
+  # Comments
+  #
+  # Giscus 미사용
+  # =========================================================
+
   - source: "@quartz-community/comments"
     enabled: false
+
     options:
       provider: giscus
       options:
@@ -222,80 +450,153 @@ plugins:
         inputPosition: bottom
         lightTheme: light
         darkTheme: dark
-        lang: en
+        lang: ko
+
     layout:
       position: afterBody
       priority: 10
+
+
+  # =========================================================
+  # Footer
+  # =========================================================
+
   - source: "@quartz-community/footer"
     enabled: true
+
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/rpaisXol
+        Portfolio: https://rpaisxol.github.io
+
     layout:
       position: footer
       priority: 50
+
+
+  # =========================================================
+  # Recent Notes
+  #
+  # Explorer 중심 구조이므로 삭제
+  # =========================================================
+
   - source: "@quartz-community/recent-notes"
-    enabled: true
+    enabled: false
+
     options:
       title: Recent Notes
       limit: 5
       linkToMore: false
       showTags: true
+
     layout:
       position: left
       priority: 25
+
+
+  # =========================================================
+  # Mobile Spacer
+  # =========================================================
+
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
     order: 25
+
     layout:
       position: left
       priority: 25
       display: mobile-only
+
+
+  # =========================================================
+  # Bases
+  # =========================================================
+
   - source: "@quartz-community/bases-page"
     enabled: true
     options: {}
     order: 50
+
+
+  # =========================================================
+  # Obsidian Properties
+  #
+  # Frontmatter는 사용하지만 화면에는 표시하지 않음
+  # =========================================================
+
   - source: "@quartz-community/note-properties"
     enabled: true
+
     options:
       includeAll: false
+
       includedProperties:
         - description
         - tags
         - aliases
+
       excludedProperties: []
-      hidePropertiesView: false
+
+      hidePropertiesView: true
+
       delimiters: ---
       language: yaml
+
     order: 5
+
     layout:
       position: beforeBody
       priority: 15
       display: all
+
+
+# ===========================================================
+# Layout
+# ===========================================================
+
 layout:
+
+  # ---------------------------------------------------------
+  # Toolbar
+  # DarkMode + ReaderMode
+  # ---------------------------------------------------------
+
   groups:
     toolbar:
-      priority: 35
+      priority: 30
       direction: row
       gap: 0.5rem
+
+
+  # ---------------------------------------------------------
+  # Page Types
+  # ---------------------------------------------------------
+
   byPageType:
+
     "404":
       positions:
         beforeBody: []
         left: []
         right: []
+
     content: {}
+
     folder:
       exclude:
         - reader-mode
+
       positions:
         right: []
+
     tag:
       exclude:
         - reader-mode
+
       positions:
         right: []
+
     canvas: {}
+
     bases: {}
