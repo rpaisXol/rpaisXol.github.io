@@ -23,7 +23,6 @@ description: "Data Analysis, AI, Computer Vision을 중심으로 학습 내용�
 **Programming Language**
 
 - Python
-- JavaScript
 - C
 - Java
 
@@ -41,7 +40,6 @@ description: "Data Analysis, AI, Computer Vision을 중심으로 학습 내용�
 
 **Web Framework**
 
-- Node.js
 - Django
 
 **Data Visualization**

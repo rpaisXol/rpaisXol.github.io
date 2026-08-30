@@ -1,15 +1,15 @@
 ---
-title: "템플릿 매칭"
+title: 템플릿 매칭
 aliases:
-  - "Template Matching"
-  - "OpenCV matchTemplate"
+  - Template Matching
+  - OpenCV matchTemplate
 tags:
   - OpenCV
   - Computer-Vision
   - Image-Processing
   - Template-Matching
 created: 2026-08-30
-status: 정리완료
+status: 정리완료_ver1
 ---
 
 # OpenCV 템플릿 매칭
