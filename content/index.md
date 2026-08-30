@@ -10,8 +10,6 @@ description: "Data Analysis, AI, Computer Vision을 중심으로 학습 내용�
 あなたの投稿に修正やエラーがある場合は、コメントまたは私の [email](mailto:rpais0109@gmail.com) に連絡してください。
 
 ---
-Recent Notes
----
 
 ## About me
 
@@ -62,5 +60,3 @@ Recent Notes
 
 - Email: [rpais0109@gmail.com](mailto:rpais0109@gmail.com)
 - GitHub: [rpaisXol](https://github.com/rpaisXol)
-
----
