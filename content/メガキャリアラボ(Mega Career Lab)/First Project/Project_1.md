@@ -27,7 +27,7 @@ status: Version 1.0
 * **한국 (KOSIS 국가데이터처):** 
   * 고령인구비율(한국, 시도) [고령화 인구비율](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
   * 시도별 장기요양기관 현황(한국, 시도) [시도별 장기요양기관 현황](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
-  * 인구 천 명당 의료기관 병상수(한국, 시도) [한국의 인구 천 명당 의료기관 병상수](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
+  * 인구 천 명당 의료기관 병상수(한국, 시도) [인구 천 명당 의료기관 병상수](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
 * **일본 (e-Stat 정부통계포털):** 
   * 인구추계(일본, 도도부현) [인구추계](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
   * 사회·인구통계체계의 의료 및 복지 분야 지표(일본, 도도부현)[사회·인구통계체계의 의료 및 복지 분야](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
