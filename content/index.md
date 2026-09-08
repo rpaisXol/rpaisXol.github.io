@@ -51,6 +51,7 @@ description: "Data Analysis, AI, Computer Vision을 중심으로 학습 내용�
 
 - 応用情報技術者試験 (Applied Information Technology Engineer)
 - ビッグデータ分析基士 (きし)
+- ビッグデータ分析基士 (きし)
 - ADSP (データ分析準専門家)
 - SQLD (SQL Developer)
 
