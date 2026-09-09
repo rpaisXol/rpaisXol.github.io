@@ -1,15 +1,15 @@
 ---
-title: 템플릿 매칭
+title: "OpenCV 템플릿 매칭"
 aliases:
-  - Template Matching
-  - OpenCV matchTemplate
+  - "Template Matching"
+  - "OpenCV matchTemplate"
 tags:
   - OpenCV
   - Computer-Vision
   - Image-Processing
   - Template-Matching
 created: 2026-08-30
-status: 정리완료_ver1
+status: 정리완료
 ---
 
 # OpenCV 템플릿 매칭
@@ -30,8 +30,12 @@ status: 정리완료_ver1
 6. [[#6. 최적의 매칭 위치 찾기|매칭 위치 찾기]]
 7. [[#7. Python과 OpenCV 실습|OpenCV 실습]]
 8. [[#8. 6가지 방법을 한 번에 비교하기|전체 방법 비교]]
-9. [[#9. 결과 해석 시 주의 사항|주의 사항]]
-10. [[#10. 핵심 정리|핵심 정리]]
+9. [[#9. 실제 템플릿 매칭 결과|실행 결과]]
+10. [[#10. 결과 해석 시 주의 사항|주의 사항]]
+11. [[#11. 핵심 정리|핵심 정리]]
+12. [[#12. 복습 문제|복습 문제]]
+13. [[#13. 관련 노트|관련 노트]]
+14. [[#14. 참고 자료|참고 자료]]
 
 ---
 
@@ -100,7 +104,8 @@ $$
 $$
 
 > [!note]
-> 결과 영상의 각 픽셀은 실제 색상을 나타내는 것이 아니라, 해당 위치에서 계산된 **차이 또는 유사도 점수**를 나타낸다.
+> - 결과 영상의 각 픽셀은 실제 색상을 나타내는 것이 아니다.
+> - 해당 위치에서 계산된 **차이 또는 유사도 점수**를 나타낸다.
 
 ---
 
@@ -133,9 +138,9 @@ $$
 T \neq \operatorname{Scale}(T)
 $$
 
-> [!warning] 한계점
-> - 기본 템플릿 매칭은 **이동(Translation)**에는 대응한다. 
-> - 그러나 **회전(Rotation)**과 **크기 변화(Scaling)**에는 강하지 않다.
+> [!warning] 중요한 한계
+> - 기본 템플릿 매칭은 **이동(Translation)**에는 대응할 수 있다.
+> - 하지만 **회전(Rotation)**과 **크기 변화(Scaling)**에는 강하지 않다.
 
 ---
 
@@ -407,8 +412,8 @@ R(x,y)\uparrow
 $$
 
 > [!warning] 점수 범위 주의
-> - `TM_CCOEFF`의 결과값은 반드시 $-1$부터 $1$ 사이가 아님
-> - $-1$부터 $1$ 사이의 정규화된 점수는 `TM_CCOEFF_NORMED`에서 얻음
+> - `TM_CCOEFF`의 결과값은 반드시 $-1$부터 $1$ 사이가 아니다. 
+> - $-1$부터 $1$ 사이의 정규화된 점수는 `TM_CCOEFF_NORMED`에서 얻는다.
 
 ---
 
@@ -458,15 +463,12 @@ R(x,y)\approx -1
 \text{밝기 변화 방향이 서로 반대임}
 $$
 
-> [!tip] 처음 사용할 때의 추천
-> - 특별한 조건이 없다면 점수 해석이 쉬운 `cv2.TM_CCOEFF_NORMED`부터 실험해 볼 수 있다. 
-> - 다만 템플릿의 픽셀값이 모두 같아 분산이 $0$인 경우에는 상관 계수 방식이 적합하지 않을 수 있다.
-
 ---
 
 ## 6. 최적의 매칭 위치 찾기
 
-`cv2.matchTemplate()`이 반환하는 것은 사각형 좌표가 아니라 **결과 점수 맵**이다. 최적의 위치는 `cv2.minMaxLoc()`으로 찾는다.
+- `cv2.matchTemplate()`이 반환하는 것은 사각형 좌표가 아니라 **결과 점수 맵**이다. 
+- 최적의 위치는 `cv2.minMaxLoc()`으로 찾는다.
 
 ```python
 min_value, max_value, min_location, max_location = cv2.minMaxLoc(result)
@@ -514,7 +516,7 @@ $$
 
 ---
 
-## 7. Python과 OpenCV 실습
+## 7. OpenCV 실습
 
 ### 7.1 기본 템플릿 매칭
 
@@ -525,9 +527,7 @@ from pathlib import Path
 
 import cv2
 
-
 def load_grayscale_image(path: str) -> cv2.typing.MatLike:
-    """이미지를 그레이스케일로 불러오고 실패 여부를 검사한다."""
     image_path = Path(path)
     image = cv2.imread(str(image_path), cv2.IMREAD_GRAYSCALE)
 
@@ -618,8 +618,7 @@ pip install opencv-python
 ```
 
 > [!note]
-> - `cv2.typing.MatLike`를 인식하지 못하는 구버전 OpenCV에서는 타입 표기를 제거를 혹은 업데이트할 수 있다.
-> - 템플릿 매칭 동작 자체에는 영향을 주지 않는다.
+> `cv2.typing.MatLike`를 인식하지 못하는 구버전 OpenCV에서는 타입 표기를 제거하거나 OpenCV를 업데이트할 수 있다. 템플릿 매칭 동작 자체에는 영향을 주지 않는다.
 
 ---
 
@@ -631,7 +630,6 @@ pip install opencv-python
 from pathlib import Path
 
 import cv2
-
 
 METHODS = {
     "TM_SQDIFF": cv2.TM_SQDIFF,
@@ -705,14 +703,84 @@ if __name__ == "__main__":
 ```
 
 > [!important] 점수 직접 비교 금지
-> - 6가지 방법은 계산식과 점수 범위가 서로 다르다. 
+> - 6가지 방법은 계산식과 점수 범위가 서로 다르다.
 > - 따라서 `TM_CCORR`의 점수와 `TM_CCOEFF_NORMED`의 점수를 숫자 크기만으로 직접 비교하면 안 된다.
 
 ---
 
-## 9. 결과 해석 시 주의 사항
+## 9. 실제 템플릿 매칭 결과
 
-### 9.1 함수와 상수 이름
+### 9.1 입력 영상
+
+다음 `Lenna.png`는 템플릿을 검색할 전체 입력 영상이다.
+
+![템플릿 매칭 입력 영상](assets/template_matching/Lenna.png)
+
+- 입력 영상 크기: $250 \times 250$ 픽셀
+- 역할: 템플릿이 포함되어 있는 전체 검색 영역
+
+다음 `template.png`는 입력 영상에서 찾으려는 작은 부분 영상이다.
+
+![검색할 템플릿 영상](assets/template_matching/template.png)
+
+- 템플릿 크기: $78 \times 107$ 픽셀
+- 역할: 입력 영상의 모든 후보 위치와 비교할 기준 영상
+### 9.2 계산 과정
+
+`cv2.TM_CCOEFF_NORMED` 방식에 해당하는 정규화 상관 계수를 계산하면 최적 위치는 다음과 같다.
+
+$$
+(x^*,y^*)=
+\operatorname*{arg\,max}_{x,y}R(x,y)
+=(96,86)
+$$
+
+템플릿의 왼쪽 위 좌표는 $(96,86)$이고, 오른쪽 아래 좌표는 $(173,192)$이다.
+
+![별도로 계산한 템플릿 매칭 결과](assets/template_matching/result_corrected.png)
+
+| 구분 | 결과 |
+|---|---:|
+| 비교 방법 | `TM_CCOEFF_NORMED` |
+| 입력 영상 크기 | $250 \times 250$ |
+| 템플릿 크기 | $78 \times 107$ |
+| 결과 맵 크기 | $173 \times 144$ |
+| 왼쪽 위 좌표 | $(96,86)$ |
+| 오른쪽 아래 좌표 | $(173,192)$ |
+| 최대 유사도 | $1.0000$ |
+
+최대 유사도가 $1.0000$인 이유는 `template.png`가 `Lenna.png`의 해당 영역에서 픽셀 변화 없이 그대로 잘라낸 영상이기 때문이다.
+
+$$
+T(x',y')=I(96+x',86+y')
+$$
+
+따라서 두 영상의 정규화 상관 계수는 다음과 같다.
+
+$$
+R(96,86)=1
+$$
+
+### 9.3 유사도 결과 맵
+
+다음 결과 맵은 템플릿을 입력 영상의 각 위치에 놓았을 때 계산된 유사도 점수를 색상으로 나타낸 것이다.
+
+![템플릿 매칭 유사도 결과 맵](assets/template_matching/score_map.png)
+
+- 가로축: 템플릿 왼쪽 위의 $x$ 좌표
+- 세로축: 템플릿 왼쪽 위의 $y$ 좌표
+- 색상: 해당 위치의 정규화 상관 계수
+- 흰색 `×`: 최대 유사도가 나온 위치 $(96,86)$
+
+> [!note] 결과 해석
+> - 결과 맵에서 가장 높은 점수를 가진 위치가 최종 검출 위치가 된다. 
+> - 레나에서는 얼굴 영역에서 유사도가 $1.0000$으로 계산되어 정확하게 검출되었다.
+
+---
+
+## 10. 결과 해석 시 주의 사항
+
+### 10.1 함수와 상수 이름
 
 현재 Python OpenCV에서는 다음 이름을 사용한다.
 
@@ -728,7 +796,7 @@ if __name__ == "__main__":
 > - `TM_NORMED`라는 독립적인 방법은 없다.
 > - 정규화 교차 상관의 정확한 이름은 `TM_CCORR_NORMED`이다.
 
-### 9.2 정규화의 의미
+### 10.2 정규화의 의미
 
 정규화는 서로 다른 크기의 점수를 일정한 기준으로 비교하기 쉽게 만드는 과정이다.
 
@@ -740,7 +808,7 @@ $$
 
 하지만 정규화를 사용한다고 해서 모든 조명 변화가 완전히 해결되는 것은 아니다. 특히 그림자, 반사광, 부분 가림이 발생하면 매칭 성능이 떨어질 수 있다.
 
-### 9.3 임계값 사용
+### 10.3 임계값 사용
 
 가장 좋은 위치 하나만 찾는 것이 아니라 동일한 물체를 여러 개 찾으려면 임계값을 사용할 수 있다.
 
@@ -773,10 +841,9 @@ for x, y in zip(locations[1], locations[0]):
 ```
 
 > [!caution]
-> - 임계값만 사용하면 하나의 물체 주변에서 여러 개의 겹치는 위치가 검출될 수 있다. 
-> - 실제 응용에서는 비최대 억제(Non-Maximum Suppression)나 좌표 군집화로 중복을 제거할 수 있다.
+> 임계값만 사용하면 하나의 물체 주변에서 여러 개의 겹치는 위치가 검출될 수 있다. 실제 응용에서는 비최대 억제(Non-Maximum Suppression)나 좌표 군집화로 중복을 제거할 수 있다.
 
-### 9.4 회전과 크기 변화 대응
+### 10.4 회전과 크기 변화 대응
 
 기본 템플릿 매칭으로 회전이나 크기 변화에 대응하려면 여러 버전의 템플릿을 만들어 반복해서 비교할 수 있다.
 
@@ -796,7 +863,7 @@ $$
 
 ---
 
-## 10. 핵심 정리
+## 11. 핵심 정리
 
 > [!summary] 핵심 내용
 > - 템플릿 매칭은 큰 입력 영상에서 작은 템플릿과 비슷한 위치를 찾는 방법이다.
@@ -823,10 +890,9 @@ $$
 \operatorname*{arg\,max}_{x,y}R(x,y)
 $$
 
----
 
-## 참고 자료
+---
+## 12. 참고 자료
 
 - [OpenCV 공식 문서: Template Matching](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html)
 - [OpenCV 공식 문서: TemplateMatchModes](https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html)
-
