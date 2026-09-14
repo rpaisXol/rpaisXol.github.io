@@ -237,3 +237,11 @@ import seaborn as sns
 sns.countplot(x = var)
 ```
 ![[{F9E090FE-433C-42BE-AFB6-5F97151CDB9A}.png]]
+
+#### **seaborn의 titanic 데이터로 그래프 만들기**
+
+```python
+df = sns.load_dataset('titanic')
+df
+```
+![[{B65860F3-98C5-4B5D-8E15-0221F2E1D1FF}.png]]
