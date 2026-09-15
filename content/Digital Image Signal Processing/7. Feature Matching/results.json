@@ -1,0 +1,13 @@
+{
+  "opencv": "5.0.0",
+  "keypoints": [
+    1472,
+    1500
+  ],
+  "ratio_matches": 827,
+  "inliers": 771,
+  "outliers": 56,
+  "inlier_median_reprojection_px": 0.8571128845214844,
+  "grid_median_error_px": 0.646217942237854,
+  "grid_max_error_px": 3.446655750274658
+}
