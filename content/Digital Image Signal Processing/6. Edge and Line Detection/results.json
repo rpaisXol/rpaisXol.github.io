@@ -1,0 +1,15 @@
+{
+  "opencv": "5.0.0",
+  "canny_counts": {
+    "30/90": 5742,
+    "60/180": 3308,
+    "100/250": 1934
+  },
+  "synthetic_standard_count": 8,
+  "synthetic_segment_counts": {
+    "5": 13,
+    "25": 10
+  },
+  "lenna_standard_count": 16,
+  "lenna_segment_count": 46
+}
