@@ -1,0 +1,114 @@
+[
+  {
+    "chapter": 1,
+    "exercises": 10,
+    "images": 8,
+    "before_bytes": 18793,
+    "after_bytes": 17966,
+    "code_blocks": 25
+  },
+  {
+    "chapter": 2,
+    "exercises": 3,
+    "images": 3,
+    "before_bytes": 9127,
+    "after_bytes": 9113,
+    "code_blocks": 8
+  },
+  {
+    "chapter": 3,
+    "exercises": 8,
+    "images": 10,
+    "before_bytes": 17427,
+    "after_bytes": 17413,
+    "code_blocks": 15
+  },
+  {
+    "chapter": 4,
+    "exercises": 12,
+    "images": 7,
+    "before_bytes": 23419,
+    "after_bytes": 23405,
+    "code_blocks": 38
+  },
+  {
+    "chapter": 5,
+    "exercises": 10,
+    "images": 9,
+    "before_bytes": 17677,
+    "after_bytes": 17663,
+    "code_blocks": 21
+  },
+  {
+    "chapter": 6,
+    "exercises": 7,
+    "images": 14,
+    "before_bytes": 22361,
+    "after_bytes": 22347,
+    "code_blocks": 21
+  },
+  {
+    "chapter": 7,
+    "exercises": 9,
+    "images": 9,
+    "before_bytes": 21546,
+    "after_bytes": 21532,
+    "code_blocks": 29
+  },
+  {
+    "chapter": 8,
+    "exercises": 7,
+    "images": 4,
+    "before_bytes": 15475,
+    "after_bytes": 15461,
+    "code_blocks": 16
+  },
+  {
+    "chapter": 9,
+    "exercises": 5,
+    "images": 2,
+    "before_bytes": 10375,
+    "after_bytes": 10361,
+    "code_blocks": 12
+  },
+  {
+    "chapter": 10,
+    "exercises": 5,
+    "images": 7,
+    "before_bytes": 14109,
+    "after_bytes": 14095,
+    "code_blocks": 16
+  },
+  {
+    "chapter": 11,
+    "exercises": 7,
+    "images": 19,
+    "before_bytes": 31686,
+    "after_bytes": 31487,
+    "code_blocks": 34
+  },
+  {
+    "chapter": 12,
+    "exercises": 11,
+    "images": 6,
+    "before_bytes": 25999,
+    "after_bytes": 25606,
+    "code_blocks": 34
+  },
+  {
+    "chapter": 13,
+    "exercises": 8,
+    "images": 5,
+    "before_bytes": 16601,
+    "after_bytes": 15453,
+    "code_blocks": 18
+  },
+  {
+    "chapter": 14,
+    "exercises": 14,
+    "images": 26,
+    "before_bytes": 32997,
+    "after_bytes": 32983,
+    "code_blocks": 37
+  }
+]
