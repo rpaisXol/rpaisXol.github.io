@@ -1,0 +1,2 @@
+WITH t(v) AS (VALUES (0),(NULL))
+SELECT COUNT(*),COUNT(v) FROM t;

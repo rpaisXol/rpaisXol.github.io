@@ -1,0 +1,2 @@
+WITH t(v) AS (VALUES (1),(1),(2))
+SELECT DISTINCT v FROM t ORDER BY v;

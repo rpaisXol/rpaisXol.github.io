@@ -1,0 +1,2 @@
+WITH t(v) AS (VALUES (10),(NULL),(20))
+SELECT COUNT(*), COUNT(v), AVG(v) FROM t;

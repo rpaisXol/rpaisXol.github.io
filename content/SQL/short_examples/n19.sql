@@ -1,0 +1,3 @@
+WITH t(d,v) AS (VALUES (10,1),(10,2),(20,3))
+SELECT d,COUNT(*) FROM t GROUP BY d
+HAVING COUNT(*)>=2;

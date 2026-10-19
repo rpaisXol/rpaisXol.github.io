@@ -1,0 +1,9 @@
+# 1과목 2장 · 데이터 모델과 SQL
+
+- [전체 목차](../../00_%EC%A0%84%EC%B2%B4%EB%AA%A9%EC%B0%A8.md)
+
+- [함수 종속과 정규화](01_%ED%95%A8%EC%88%98_%EC%A2%85%EC%86%8D%EA%B3%BC_%EC%A0%95%EA%B7%9C%ED%99%94.md)
+- [데이터 관계와 조인 결과의 행 수](02_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EA%B4%80%EA%B3%84%EC%99%80_%EC%A1%B0%EC%9D%B8_%EA%B2%B0%EA%B3%BC%EC%9D%98_%ED%96%89_%EC%88%98.md)
+- [데이터 모델과 트랜잭션](03_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%AA%A8%EB%8D%B8%EA%B3%BC_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98.md)
+- [NULL 속성과 데이터 모델](04_NULL_%EC%86%8D%EC%84%B1%EA%B3%BC_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%AA%A8%EB%8D%B8.md)
+- [본질식별자와 인조식별자](05_%EB%B3%B8%EC%A7%88%EC%8B%9D%EB%B3%84%EC%9E%90%EC%99%80_%EC%9D%B8%EC%A1%B0%EC%8B%9D%EB%B3%84%EC%9E%90.md)
