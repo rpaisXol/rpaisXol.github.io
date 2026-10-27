@@ -1,0 +1,76 @@
+{
+  "python": "3.12.14",
+  "opencv": "5.0.0",
+  "numpy": "2.5.4",
+  "input_pair": "user-provided Tsukuba",
+  "image_size_wh": [
+    384,
+    288
+  ],
+  "input_sha256": {
+    "tsukuba_l.png": "c0e2b0a79c9a77665f0afd662d48517af8806cc4c3a7a41886cfb3a9faefa75b",
+    "tsukuba_r.png": "8e72182d73086df89e5dcbb7f9ca49e175db3e852c588547537573299cd2a27e"
+  },
+  "rectification_assumed": true,
+  "calibration_performed": false,
+  "calibration_parameters_provided": false,
+  "ground_truth_available": false,
+  "metric_depth_computed": false,
+  "relative_index_assumption_cx_difference_px": 0.0,
+  "matcher": {
+    "min_disparity_left": 0,
+    "min_disparity_right": -31,
+    "num_disparities": 32,
+    "block_size": 5,
+    "lr_threshold_px": 1.0,
+    "mode": "SGBM_3WAY"
+  },
+  "alignment_diagnostic": {
+    "ratio_test_matches": 686,
+    "median_abs_vertical_error_px": 0.0,
+    "p90_abs_vertical_error_px": 1.6104812622070312,
+    "fraction_abs_vertical_error_le_1px": 0.8658892128279884,
+    "median_horizontal_disparity_px": 6.9120025634765625,
+    "fraction_positive_horizontal_disparity": 1.0
+  },
+  "positive_disparity_fraction": 0.8922887731481481,
+  "consistency_pass_fraction": 0.8198875144675926,
+  "accepted_disparity_min_px": 2.6875,
+  "accepted_disparity_max_px": 15.8125,
+  "reference_disparity_px": 5.125,
+  "manual_regions": [
+    {
+      "region": "Head",
+      "label": "머리 부근",
+      "x0": 125,
+      "y0": 160,
+      "x1": 165,
+      "y1": 220,
+      "valid_fraction": 0.9829166666666667,
+      "median_disparity_px": 10.8125,
+      "median_relative_depth_index": 0.47398844361305237
+    },
+    {
+      "region": "Books",
+      "label": "배경 책장",
+      "x0": 45,
+      "y0": 15,
+      "x1": 120,
+      "y1": 65,
+      "valid_fraction": 1.0,
+      "median_disparity_px": 5.0,
+      "median_relative_depth_index": 1.024999976158142
+    },
+    {
+      "region": "Lamp",
+      "label": "스탠드 부근",
+      "x0": 220,
+      "y0": 115,
+      "x1": 245,
+      "y1": 155,
+      "valid_fraction": 0.979,
+      "median_disparity_px": 14.0,
+      "median_relative_depth_index": 0.3660714328289032
+    }
+  ]
+}

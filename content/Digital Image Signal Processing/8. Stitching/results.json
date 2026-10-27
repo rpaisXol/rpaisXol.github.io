@@ -1,0 +1,12 @@
+{
+  "opencv": "5.0.0",
+  "ratio_matches": 743,
+  "inliers": 709,
+  "grid_median_error_px": 0.1273762285709381,
+  "grid_max_error_px": 0.5676870942115784,
+  "canvas_width_height": [
+    251,
+    251
+  ],
+  "overlap_pixels": 32518
+}

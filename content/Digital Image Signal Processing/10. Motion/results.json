@@ -1,0 +1,12 @@
+{
+  "opencv": "5.0.0",
+  "frames_read": 100,
+  "output_frames_read": 100,
+  "synthetic_moving_interval_mean_iou": 0.2068252052081892,
+  "frame85_pixels": {
+    "frame_difference": 0,
+    "fixed_background": 1200,
+    "mog2_adaptive": 0,
+    "mog2_frozen": 1356
+  }
+}
