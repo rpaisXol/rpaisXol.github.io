@@ -2,7 +2,6 @@
 title: "2. 히스토그램 (Histogram)"
 tags: [OpenCV, Histogram, CLAHE]
 ---
-
 # 2. 히스토그램 (Histogram)
 
 히스토그램은 **픽셀 값을 종류별로 세어 놓은 그래프**다. 레나 영상의 밝기 분포를 확인하고, 전체 평활화와 CLAHE로 대비가 어떻게 변하는지 비교한다. 실습은 8비트 `uint8` 영상을 사용한다.
