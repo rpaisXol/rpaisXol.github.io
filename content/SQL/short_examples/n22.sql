@@ -1,2 +1,0 @@
-WITH t(v) AS (VALUES (1),(2),(6))
-SELECT v FROM t WHERE v>(SELECT AVG(v) FROM t);

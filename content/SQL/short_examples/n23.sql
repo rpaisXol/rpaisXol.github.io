@@ -1,3 +1,0 @@
-WITH a(id) AS (VALUES (1),(2)), b(id) AS (VALUES (1))
-SELECT id FROM a WHERE NOT EXISTS
-(SELECT 1 FROM b WHERE b.id=a.id);
