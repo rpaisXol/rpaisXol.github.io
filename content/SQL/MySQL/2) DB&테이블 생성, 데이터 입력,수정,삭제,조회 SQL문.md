@@ -2,6 +2,7 @@
 tags:
 note_type:
 slug:
+title: DB&테이블 생성, 데이터 입력,수정,삭제,조회 SQL문
 ---
 **SQL은 용도에 따라 DDL, DML, DCL 등으로 구분한다.***
 
