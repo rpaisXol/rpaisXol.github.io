@@ -17,7 +17,7 @@ title: DB&테이블 생성, 데이터 입력,수정,삭제,조회 SQL문
 
 DDL : CREATE, DROP, ALTER
 
-```
+```sql
 CREATE DATABASE test;
 
 CREATE TABLE product ( 
@@ -30,7 +30,7 @@ CREATE TABLE product (
 # **2. 조회, 입력, 수정, 삭제 SQL 쿼리**
 
 ​DML : INSERT, UPDATE, DELETE, SELECT
-```
+```sql
 -- 추가 
 INSERT INTO product(name, price) 
 VALUES ('키보드', 50000); 
@@ -74,7 +74,7 @@ TRUNCATE product;
 - NULL은 0도 아니고 빈 문자열("")도 아니다. 값이 아직 없거나(미입력), 알 수 없는 상태를 의미한다.
 - 테이블에서 컬럼값이 필수 입력값이라면 NOT NULL을 사용. 기본키의 자동으로 NOT NULL이 된다.
 
-```
+```sql
 CREATE TABLE product2 ( id INT AUTO_INCREMENT PRIMARY KEY, 
 	-- 기본키는 자동으로 NOT NULL 
 	name VARCHAR(30), -- NOT NULL 옵션이 없으면 NULL값 허용 
@@ -83,7 +83,7 @@ CREATE TABLE product2 ( id INT AUTO_INCREMENT PRIMARY KEY,
 ```
 
 **product1**
-```
+```sql
 INSERT INTO product(name) 
 VALUES('모니터'); 
 INSERT INTO product(name, price) 
@@ -92,7 +92,7 @@ VALUES('카메라', NULL);
 ```
 
 **product2**
-```
+```sql
 INSERT INTO product2(name) 
 VALUES('모니터'); -- ERROR : Field 'price' doesn't have a default value
 

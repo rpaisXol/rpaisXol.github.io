@@ -17,7 +17,7 @@ MySQL8.4의 전체 데이터 타입은 [https://dev.mysql.com/doc/refman/8.4/en/
 
 **문자 -> 숫자**
 
-```
+```sql
 -- CAST() 함수 사용
 SELECT CAST('100' AS float) AS result; -- 컬럼 없이  값이나 계산식을 SELECT로 조회시 FROM절 생략
 
@@ -30,7 +30,7 @@ SELECT 'xyz' + 50; -- 문자는 0으로 변환
 
 **숫자 -> 문자**
 
-```
+```sql
 SELECT CAST(123 AS CHAR);
 
 SELECT CONCAT(CAST(100 AS CHAR), '원');
@@ -44,7 +44,7 @@ FROM customer;
 
 **문자 -> 날짜**
 
-```
+```sql
 SELECT CAST('2026-07-13' AS DATE); 
 
 SELECT CAST('2026-07-13 09:30:00' AS DATETIME);
@@ -52,13 +52,13 @@ SELECT CAST('2026-07-13 09:30:00' AS DATETIME);
 
 **날짜 -> 문자**
 
-```
+```sql
 SELECT CAST(NOW() AS CHAR);
 ```
 
 **문자 -> 날짜**
 
-```
+```sql
 SELECT STR_TO_DATE('20260713', '%Y%m%d'); 
 
 SELECT STR_TO_DATE('2026-07-13', '%Y-%m-%d');
@@ -66,7 +66,7 @@ SELECT STR_TO_DATE('2026-07-13', '%Y-%m-%d');
 
 **실수 <-> 정수**
 
-```
+```sql
 SELECT CAST(123.987 AS SIGNED);
 
 SELECT CAST(100 AS DECIMAL(10,2));

@@ -14,7 +14,7 @@ slug:
 
 ![[6) 숫자, 문자, 날짜 타입의 단일행 함수-1793167828039.webp]]
 
-```
+```sql
 SELECT
     first_name,
     UPPER(first_name) AS upper_name
@@ -61,7 +61,7 @@ FROM customer;
 
 ![[6) SELECT - 숫자, 문자, 날짜 타입의 단일행 함수-1793168067775.webp]]
 
-```
+```sql
 SELECT
     customer_id,
     MOD(customer_id, 10) AS remainder 
@@ -116,7 +116,7 @@ LIMIT 10;
 
 ![[6) SELECT - 숫자, 문자, 날짜 타입의 단일행 함수-1793168100723.webp]]
 
-```
+```sql
 SELECT
     NOW(),
     CURDATE(),
@@ -166,13 +166,13 @@ SELECT
 
 **4. where절에서 단일행 함수 - 함수의 반환값을 조건값으로 비교**
 
-```
+```sql
 SELECT 컬럼
 FROM 테이블
 WHERE 함수(컬럼) = 값;
 ```
 
-```
+```sql
 -- 이름이 'A'로 시작하는 고객
 SELECT *
 FROM customer
@@ -194,7 +194,7 @@ FROM customer
 WHERE RIGHT(email, 4) = '.org';
 ```
 
-```
+```sql
 SELECT *
 FROM payment
 WHERE MOD(payment_id, 2) = 0;
@@ -227,8 +227,7 @@ WHERE LENGTH(first_name) >= 6;
 
 - 따라서 인덱스가 있는 컬럼은 가능하면 함수 대신 범위 조건으로 검색하는 것이 성능에 유리하다. 다만 인덱스가 없는 컬럼이라면 함수 사용 여부에 따른 성능 차이는 거의 없다.
 
-```
--- 
+```sql
 SELECT *
 FROM customer
 WHERE YEAR(create_date) = 2005;

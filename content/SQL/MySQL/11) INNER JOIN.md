@@ -63,7 +63,7 @@ A                           B
 ​
 **INNER JOIN 문법**
 
-```
+```sql
 SELECT 조회할컬럼
 FROM 첫번째테이블
 INNER JOIN 두번째테이블
@@ -97,7 +97,7 @@ last_update
 - 한 나라(country)에 여러 도시(city)가 존재하는 1:N 관계이다.
 ```
 
-```
+```sql
 SELECT
     c.city,
     co.country
@@ -136,7 +136,7 @@ city_id (FK)
 - 한 도시에는 여러 주소가 있다.
 ```
 
-```
+```sql
 SELECT
     co.country,
     c.city,
@@ -210,9 +210,8 @@ film_category는 영화(film)와 장르(category)의 다대다(N:M) 관계를 �
 
 관계형 데이터베이스에서 테이블간의 **N:M 관계를 1:N + 1:N으로 분해하기 위해 사용하는 테이블**을 의미한다.
 
-```
+```sql
 -- 1) 영화 제목과 카테고리 조회
-
 SELECT
     f.title,
     c.name AS category
@@ -223,9 +222,8 @@ INNER JOIN category AS c
     ON fc.category_id = c.category_id;  -- ③ film_category의 category_id와 category의 category_id를 연결한다.
 ```
 
-```
+```sql
 -- 2) Action 장르 영화 조회
-
 SELECT
     f.title,
     c.name
@@ -237,9 +235,8 @@ INNER JOIN category AS c
 WHERE c.name = 'Action';
 ```
 
-```
+```sql
 -- 3) 영화 제목이 A로 시작하는 영화
-
 SELECT
     f.title,
     c.name
@@ -252,9 +249,8 @@ WHERE f.title LIKE 'A%'
 ORDER BY f.title;
 ```
 
-```
+```sql
 -- 4) PG 등급 영화만 조회
-
 SELECT
     f.title,
     f.rating,

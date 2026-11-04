@@ -3,8 +3,8 @@ title: SELF JOIN
 created: 2026-10-19
 updated: 2026-10-19
 tags:
-note_type: concept-guide
-slug: sqld-concept-n42
+note_type:
+slug:
 ---
 # SELF JOIN
 
@@ -18,7 +18,7 @@ slug: sqld-concept-n42
 - manager_id : 자신의 관리자의 직원번호(FK 역할) manager_id에는 **같은 테이블의 emp_id**가 저장된다.
 
 employee 테이블 안에서 manager_id → emp_id를 참조한다.
-```
+```sql
 INSERT INTO employee VALUES
 (1, '김부장', NULL),
 (2, '이과장', 1),
@@ -30,7 +30,7 @@ INSERT INTO employee VALUES
 
 # 2. SELF LEFT JOIN
 
-```
+```sql
 SELECT e.emp_name AS 직원,
        m.emp_name AS 관리자
  -- 같은 테이블을 두 번 사용하므로 별칭(alias)을 붙인다.
@@ -43,7 +43,7 @@ ON e.manager_id = m.emp_id;
 
 # 3. SELF INNER JOIN
 
-```
+```sql
 SELECT e.emp_name AS 직원,
        m.emp_name AS 관리자
 FROM employee e
@@ -53,7 +53,7 @@ ON e.manager_id = m.emp_id;
 
 ![[13) SELF JOIN-1793595169923.webp]]
 
-```
+```sql
 select * 
 from student s1 cross join student s2
 where s1.student_name <> s2.student_name;

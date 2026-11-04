@@ -105,7 +105,7 @@ plt.show()
 OpenCV: 5.0.0
 ```
 
-![실습 결과 1](assets/step_01.png)
+![실습 결과 1](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/01_step_01.png)
 
 ## 2.2 그레이스케일 및 컬러 히스토그램
 
@@ -151,7 +151,7 @@ print('히스토그램 합:', int(h_gray.sum()))
 히스토그램 합: 62500
 ```
 
-![실습 결과 2](assets/step_02.png)
+![실습 결과 2](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/02_step_02.png)
 
 ### 컬러 히스토그램
 
@@ -186,7 +186,7 @@ green 픽셀 수: 62500
 red 픽셀 수: 62500
 ```
 
-![실습 결과 3](assets/step_03.png)
+![실습 결과 3](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/03_step_03.png)
 
 ### 관심 영역만 집계하기
 
@@ -223,7 +223,7 @@ print('선택한 픽셀 수:', int(h_roi.sum()))
 선택한 픽셀 수: 8925
 ```
 
-![실습 결과 4](assets/step_04.png)
+![실습 결과 4](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/04_step_04.png)
 
 ## 2.3 히스토그램 평활화
 
@@ -290,7 +290,7 @@ Original: min=21, max=237, mean=123.550, std=47.624
 Global equalization: min=0, max=255, mean=128.318, std=73.624
 ```
 
-![실습 결과 5](assets/step_05.png)
+![실습 결과 5](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/05_step_05.png)
 
 ### 차이를 쉽게 보는 입력
 
@@ -349,9 +349,9 @@ Global equalization: min=0, max=255, mean=129.602, std=73.579
 수식 구현과 OpenCV의 최대 차이: 0
 ```
 
-![실습 결과 6](assets/step_06.png)
+![실습 결과 6](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/06_step_06.png)
 
-![실습 결과 7](assets/step_07.png)
+![실습 결과 7](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/07_step_07.png)
 
 ## 2.4 적응형 히스토그램 평활화 (CLAHE)
 
@@ -414,11 +414,11 @@ Global equalization: min=0, max=255, mean=129.602, std=73.579
 CLAHE: min=47, max=216, mean=134.502, std=36.162
 ```
 
-![실습 결과 8](assets/step_08.png)
+![실습 결과 8](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/08_step_08.png)
 
-![실습 결과 9](assets/step_09.png)
+![실습 결과 9](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/09_step_09.png)
 
-![실습 결과 10](assets/step_10.png)
+![실습 결과 10](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/10_step_10.png)
 
 ### 결과 해석
 
@@ -463,7 +463,7 @@ print('Y 처리 중 Cr, Cb 유지:', np.array_equal(y_cl[:,:,1:],ycrcb[:,:,1:]))
 Y 처리 중 Cr, Cb 유지: True
 ```
 
-![실습 결과 11](assets/step_11.png)
+![실습 결과 11](Digital%20Image%20Signal%20Processing/2.%20Historgram/assets/11_step_11.png)
 
 ## 참고 문서
 

@@ -114,7 +114,7 @@ shape: (250, 250, 3) dtype: uint8
 (x, y): (120, 120) BGR: [125, 130, 205]
 ```
 
-![실습 결과 1](assets/step_01.png)
+![실습 결과 1](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/01_step_01.png)
 
 ### 실제 픽셀 확대
 
@@ -151,7 +151,7 @@ print('Gray at (120, 120):', int(gray[y, x]))
 Gray at (120, 120): 152
 ```
 
-![실습 결과 2](assets/step_02.png)
+![실습 결과 2](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/02_step_02.png)
 
 ### 밝기 계산에서 넘침 방지하기
 
@@ -185,7 +185,7 @@ uint8 240 + 30: [14]
 범위 제한: [255]
 ```
 
-![실습 결과 3](assets/step_03.png)
+![실습 결과 3](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/03_step_03.png)
 
 ## 1.2 색 공간 변환
 
@@ -227,7 +227,7 @@ assert np.array_equal(img, cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
 BGR: [125, 130, 205] RGB: [205, 130, 125]
 ```
 
-![실습 결과 4](assets/step_04.png)
+![실습 결과 4](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/04_step_04.png)
 
 ### 그레이스케일: 색을 밝기 한 값으로
 
@@ -263,7 +263,7 @@ OpenCV Gray: 152 shape: (250, 250)
 Gray to RGB: [152, 152, 152]
 ```
 
-![실습 결과 5](assets/step_05.png)
+![실습 결과 5](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/05_step_05.png)
 
 ### YCrCb: 밝기 성분과 색차 성분 나누기
 
@@ -316,7 +316,7 @@ YCrCb pixel: [152, 166, 113]
 왕복 평균 절대 오차: 0.377856
 ```
 
-![실습 결과 6](assets/step_06.png)
+![실습 결과 6](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/06_step_06.png)
 
 ## 1.3 채널 분리와 병합 (Split and Merge)
 
@@ -355,7 +355,7 @@ print('분리한 배열:', b.shape, g.shape, r.shape)
 분리한 배열: (250, 250) (250, 250) (250, 250)
 ```
 
-![실습 결과 7](assets/step_07.png)
+![실습 결과 7](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/07_step_07.png)
 
 ### 병합: 채널을 지정한 순서로 쌓기
 
@@ -400,7 +400,7 @@ copy는 메모리 공유: False
 split 결과는 메모리 공유: False
 ```
 
-![실습 결과 8](assets/step_08.png)
+![실습 결과 8](Digital%20Image%20Signal%20Processing/1.%20Pixel%20and%20Color%20Channels/assets/08_step_08.png)
 
 ### 헷갈리는 작업 비교
 

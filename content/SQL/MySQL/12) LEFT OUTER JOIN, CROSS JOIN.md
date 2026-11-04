@@ -8,13 +8,14 @@ slug:
 ---
 # 1. LEFT OUTER JOIN
 
-```
+```sql
 INSERT INTO country(country)
 VALUES ('New Land');
 ```
 
-```
--- New Land는 조회되지 않는다. INNER JOIN은 양쪽 테이블에 모두 존재하는 데이터만 조회하기 때문이다.
+```sql
+-- New Land는 조회되지 않는다. 
+-- INNER JOIN은 양쪽 테이블에 모두 존재하는 데이터만 조회하기 때문이다.
 SELECT c.country, ci.city 
 FROM country c INNER JOIN city ci 
 ON c.country_id = ci.country_id;
@@ -29,7 +30,7 @@ Algeria       → 있음
 New Land  → 없음
 ```
 
-```
+```sql
 -- LEFT OUTER JOIN을 사용하면 도시가 없는 city 컬럼은 NULL로 조회된다.
 SELECT c.country, ci.city
 FROM country c
@@ -43,7 +44,7 @@ LEFT JOIN은 왼쪽 테이블(country)의 모든 데이터를 먼저 조회한�
 도시가 있으면 → 함께 출력
 도시가 없으면 → NULL로 출력
 
-```
+```sql
 -- 도시가 없는 나라 출력
 select co.country, ci.country_id
 from country co left join city ci
@@ -60,13 +61,13 @@ where ci.country_id is null;
 
 # **2. 중간 테이블이 있는 3개의 테이블을 조인**
 
-```
+```sql
 -- 1) category 테이블에 새로운 장르 추가
 INSERT INTO category(name) 
 VALUES ('KContents');
 ```
 
-```
+```sql
 -- 2) INNER JOIN 조회
 SELECT c.name AS category, f.title
 FROM category c
@@ -76,7 +77,7 @@ INNER JOIN film f
     ON fc.film_id = f.film_id;
 ```
 
-```
+```sql
 -- 3) LEFT OUTER JOIN 조회
 SELECT c.name AS category, f.title
 FROM category c
@@ -86,7 +87,7 @@ LEFT OUTER JOIN film f
     ON fc.film_id = f.film_id;
 ```
 
-```
+```sql
 -- 4) IFNULL(), IF(), CASE등을 사용하여 다른 값으로 변경
 SELECT c.name AS category,
        IFNULL(f.title, '등록된 영화 없음') AS title
@@ -101,7 +102,7 @@ LEFT OUTER JOIN film f
 
 학생과 과목 테이블에서 성적표를 출력하는 경우의 수?
 
-```
+```sql
 -- student 테이블 생성
 CREATE TABLE student (
     student_id INT PRIMARY KEY,
@@ -115,20 +116,21 @@ CREATE TABLE subject (
 );
 ```
 
-```
+```sql
 -- 데이터 삽입
 INSERT INTO student VALUES
 (1, '홍길동'),
 (2, '김철수'),
 (3, '이영희');
 
+-- 데이터 삽입
 INSERT INTO subject VALUES
 (101, 'SQL'),
 (102, 'Python'),
 (103, 'Power BI');
 ```
 
-```
+```sql
 -- CROSS JOIN 사용
 SELECT s.student_name,
        sub.subject_name

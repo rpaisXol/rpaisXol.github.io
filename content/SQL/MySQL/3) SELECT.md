@@ -10,7 +10,7 @@ slug:
 
 [https://dev.mysql.com/doc/refman/8.4/en/select.html](https://dev.mysql.com/doc/refman/8.4/en/select.html)
 
-```
+```sql
 SELECT
     [ALL | DISTINCT | DISTINCTROW ]
     [HIGH_PRIORITY]
@@ -58,7 +58,7 @@ export_options:
 ```
 
 간단하게 하면
-```
+```sql
 SELECT 열
 FROM DB.테이블 -- DB이름은 생략 가능
 WHERE 조건
@@ -69,7 +69,7 @@ ORDER BY 열
 - 실행순서는 from절 -> where절 -> select절 -> order by절 -> LIMIT 절 순서이다.
 - (전체데이터셋 - 행데이터셋 - 열데이터셋 - 정렬순 - Ton N)
 
-```
+```sql
 -- SELECT 문(SQL 전체) --
 
 SELECT name, price      -- SELECT절
@@ -84,14 +84,14 @@ show columns from customer;
 ### 1-1. SELECT 절
 
 - 하나의 열 조회
-```
+```sql
 select first_name
 from customer
 limit 10;
 ```
 
 - 2개이상의 열 조회, 순서는 상관 없다.
-```
+```sql
 select first_name, last_name
 from customer
 limit 10;
@@ -103,7 +103,7 @@ limit 10;
 ```
 
 - 전체 열 조회
-```
+```sql
 select *
 from customer
 limit 10;
@@ -111,7 +111,7 @@ limit 10;
 
 - **DISTINCT** 연산자 : SELECT한 결과에서 중복된 행을 제거하고 고유한 값만 조회하는 연산자이다. select절이 실행 후 다음에 실행된다.
 
-```
+```sql
 SELECT DISTINCT 컬럼명
 FROM 테이블명;
 
@@ -120,7 +120,7 @@ FROM 테이블명;
 ```
 
 예)
-```
+```sql
 SELECT DISTINCT store_id
 FROM customer;
 
@@ -136,10 +136,10 @@ ORDER BY first_name;
 
 ### 1-2. **WHERE 절 : 특정행에 연산 비교/논리 연산 후 "참" 인 행만 필터링**
 
-```
+```sql
 SELECT 열 
-FROM 테이블
-WHERE 열값 비교/논리 연산
+FROM 테이블 
+WHERE 열값 비교 / 논리 연산
 ```
 
 **1) 비교 연산**(숫자, 문자, 날짜등에 사용 가능하지만 대부분은 숫자데이터 컬럼값 비교에 많이 사용된다)
@@ -148,7 +148,7 @@ WHERE 열값 비교/논리 연산
 <, <=, =, >, >=, <>, !=, !<, !>
 ```
 
-```
+```sql
 select film_id, title, length
 from film
 where length <= 50;
@@ -169,7 +169,7 @@ where length != 50
 limit 10;
 ```
 
-```
+```sql
 -- 문자값도 가능
 select film_id, title, length
 from film
@@ -183,7 +183,7 @@ where length != 50
 limit 10;
 ```
 
-```
+```sql
 select first_name, create_date
 from customer
 where create_date < '2006-02-14 22:04:37';
@@ -193,7 +193,7 @@ where create_date < '2006-02-14 22:04:37';
 
 ![[3) SELECT-1793166962089.webp]]
 
-```
+```sql
 SELECT *
 FROM customer
 WHERE active = 1
@@ -284,12 +284,13 @@ AND store_id IN (1, 2)
 AND first_name LIKE 'M%'
 AND customer_id BETWEEN 100 AND 300;
 ```
+
 **※ 연산자 우선순위**
 - SQL에서는 다음 순서로 조건을 계산한다.
 - () (괄호) -> NOT -> AND -> OR
 - AND와 OR를 함께 사용할 때는 괄호 ()를 사용하는 것이 가장 좋은 습관이다.
 
-```
+```sql
 SELECT *
 FROM customer
 WHERE active = 1
@@ -299,14 +300,15 @@ OR (store_id = 1 AND first_name = 'MARY');
 ## 1-3 ORDER BY절 / LIMIT절
 
 **1. ORDER BY절**
-```
+
+```sql
 SELECT 열
 FROM 테이블
 WHERE 열 조건
 ORDER BY 열 ASC 또는 DESC
 ```
 
-```
+```sql
 SELECT *
 FROM customer
 ORDER BY customer_id;
@@ -345,7 +347,7 @@ ORDER BY create_date DESC;
 
 **2. LIMIT : 상위 N개의 데이터만 조회, OFFSET 특정 구간의 상위 N개 조회**
 
-```
+```sql
 SELECT *
 FROM customer
 LIMIT 5;
@@ -390,7 +392,7 @@ LIMIT 3;
 
 1페이지
 
-```
+```sql
 SELECT *
 FROM customer
 ORDER BY customer_id
@@ -401,7 +403,7 @@ LIMIT 10 OFFSET 0;
 
 2페이지
 
-```
+```sql
 SELECT *
 FROM customer
 ORDER BY customer_id
@@ -410,7 +412,7 @@ LIMIT 10 OFFSET 10;
 
 3페이지
 
-```
+```sql
 SELECT *
 FROM customer
 ORDER BY customer_id

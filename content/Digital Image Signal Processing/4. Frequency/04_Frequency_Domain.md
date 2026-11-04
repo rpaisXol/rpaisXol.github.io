@@ -86,7 +86,7 @@ OpenCV: 5.0.0 영상 크기: (250, 250)
 평균 밝기: 123.550496 DC / 픽셀 수: 123.550496
 ```
 
-![실습 결과 1](assets/step_01.png)
+![실습 결과 1](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/01_step_01.png)
 
 ### 줄무늬로 공간 주파수 이해하기
 
@@ -122,7 +122,7 @@ plt.show()
 16 회 반복: 봉우리 [-0.125, 0.125]
 ```
 
-![실습 결과 2](assets/step_02.png)
+![실습 결과 2](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/02_step_02.png)
 
 ## 4.2 크기 스펙트럼과 위상
 
@@ -173,7 +173,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![실습 결과 3](assets/step_03.png)
+![실습 결과 3](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/03_step_03.png)
 
 ### 위상은 왜 필요한가?
 
@@ -207,7 +207,7 @@ print('위상 변화 관계 검증 통과')
 위상 변화 관계 검증 통과
 ```
 
-![실습 결과 4](assets/step_04.png)
+![실습 결과 4](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/04_step_04.png)
 
 ## 4.3 fftshift와 역변환
 
@@ -266,7 +266,7 @@ plt.show()
 최대 허수 잔차: 6.188987108954897e-14
 ```
 
-![실습 결과 5](assets/step_05.png)
+![실습 결과 5](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/05_step_05.png)
 
 ### OpenCV와 비교
 
@@ -464,9 +464,9 @@ Gaussian HP: s=0.06 범위: -112.07452174139522 111.47326779989515
 Gaussian BP: 0.03 / 0.12 범위: -82.88549861295577 82.33621439521673
 ```
 
-![실습 결과 6](assets/step_06.png)
+![실습 결과 6](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/06_step_06.png)
 
-![실습 결과 7](assets/step_07.png)
+![실습 결과 7](Digital%20Image%20Signal%20Processing/4.%20Frequency/assets/07_step_07.png)
 
 ### 결과 해석
 

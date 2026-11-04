@@ -68,7 +68,7 @@ panel('original.png',[('Original grayscale',gray)],cols=1)
 OpenCV: 5.0.0 영상 크기: (250, 250)
 ```
 
-![실습 결과 1](assets/step_01.png)
+![실습 결과 1](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/01_step_01.png)
 
 ## 3.1 마스크 기반 처리의 원리
 
@@ -190,7 +190,7 @@ Replicate 왼쪽 위: 200.0
 Reflect 101 왼쪽 위: 200.0
 ```
 
-![실습 결과 2](assets/step_02.png)
+![실습 결과 2](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/02_step_02.png)
 
 ## 3.2 선형 공간 필터
 
@@ -234,7 +234,7 @@ gauss = cv2.GaussianBlur(f,(9,9),1.5,borderType=border)
 panel('smoothing.png',[('Original',f),('Mean 5x5',avg),('Gaussian sigma=1.5',gauss)])
 ```
 
-![실습 결과 3](assets/step_03.png)
+![실습 결과 3](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/03_step_03.png)
 
 ### Sobel과 라플라시안
 
@@ -284,7 +284,7 @@ Sobel x 범위: -801.0 610.0
 Laplacian 범위: -326.0 302.0
 ```
 
-![실습 결과 4](assets/step_04.png)
+![실습 결과 4](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/04_step_04.png)
 
 ### 샤프닝
 
@@ -319,7 +319,7 @@ sharp_lap = np.clip(f-0.25*lap,0,255)
 panel('sharpen.png',[('Original',f),('Unsharp alpha=1',sharp),('Laplacian sharpening',sharp_lap)])
 ```
 
-![실습 결과 5](assets/step_05.png)
+![실습 결과 5](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/05_step_05.png)
 
 ## 3.3 비선형 공간 필터
 
@@ -398,9 +398,9 @@ Median 원본 대비 MAE: 4.994
 Bilateral 원본 대비 MAE: 9.278
 ```
 
-![실습 결과 6](assets/step_06.png)
+![실습 결과 6](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/06_step_06.png)
 
-![실습 결과 7](assets/step_07.png)
+![실습 결과 7](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/07_step_07.png)
 
 ### 잡음 비교의 해석
 
@@ -465,9 +465,9 @@ print('흰 픽셀 수:',*[int(np.count_nonzero(a)) for a in [binary,er,di]])
 흰 픽셀 수: 10976 8927 12985
 ```
 
-![실습 결과 8](assets/step_08.png)
+![실습 결과 8](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/08_step_08.png)
 
-![실습 결과 9](assets/step_09.png)
+![실습 결과 9](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/09_step_09.png)
 
 ### 열림·닫힘과 차이 연산
 
@@ -519,9 +519,9 @@ print('작은 검은 구멍 채움:',int(closed[75,85])==255)
 작은 검은 구멍 채움: True
 ```
 
-![실습 결과 10](assets/step_10.png)
+![실습 결과 10](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/10_step_10.png)
 
-![실습 결과 11](assets/step_11.png)
+![실습 결과 11](Digital%20Image%20Signal%20Processing/3.%20Spatial%20Filtering/assets/11_step_11.png)
 
 ## 3.5 공간 필터 조합
 
@@ -569,9 +569,9 @@ DoG 범위: -67.8143310546875 64.11682891845703
 일정한 영상의 최대 절대 응답: 7.62939453125e-06
 ```
 
-![실습 결과 12](assets/step_12.png)
+![실습 결과 12](12_step_12.png)
 
-![실습 결과 13](assets/step_13.png)
+![실습 결과 13](13_step_13.png)
 
 ### 공간 영역에서의 밴드패스 특성
 
@@ -603,7 +603,7 @@ ax.set(xlabel='Spatial frequency (cycles/pixel)',ylabel='Response',title='Contin
 ax.grid(alpha=.3); fig.tight_layout(); plt.show()
 ```
 
-![실습 결과 14](assets/step_14.png)
+![실습 결과 14](14_step_14.png)
 
 ## 참고 문서
 
