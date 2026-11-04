@@ -1,5 +1,5 @@
 ---
-title: 집합 쿼리(Set Query)
+title: 9. 집합 쿼리(Set Query)
 created: 2026-10-19
 updated: 2026-10-19
 tags:

@@ -1,5 +1,5 @@
 ---
-title: RDB, 기본키, 외래키, 관계, 인덱스
+title: 1. RDB, 기본키, 외래키, 관계, 인덱스
 created: 2026-10-19
 updated: 2026-10-19
 tags:

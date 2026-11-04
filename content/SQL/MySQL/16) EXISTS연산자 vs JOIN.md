@@ -1,5 +1,5 @@
 ---
-title:
+title: 16. EXISTS연산자 vs JOIN
 created: 2026-10-19
 updated: 2026-10-19
 tags:

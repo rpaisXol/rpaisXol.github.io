@@ -1,5 +1,5 @@
 ---
-title: SELECT - 숫자, 문자, 날짜 타입의 단일행 함수
+title: 6. SELECT - 숫자, 문자, 날짜 타입의 단일행 함수
 created: 2026-10-19
 updated: 2026-10-19
 tags:

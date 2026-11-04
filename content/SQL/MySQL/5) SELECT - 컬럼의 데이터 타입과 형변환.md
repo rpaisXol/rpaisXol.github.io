@@ -1,5 +1,5 @@
 ---
-title: SELECT - 컬럼의 데이터 타입과 형변환
+title: 5. SELECT - 컬럼의 데이터 타입과 형변환
 created: 2026-10-19
 updated: 2026-10-19
 tags:

@@ -1,5 +1,5 @@
 ---
-title: LEFT OUTER JOIN, CROSS JOIN
+title: 12. LEFT OUTER JOIN, CROSS JOIN
 created: 2026-10-19
 updated: 2026-10-19
 tags:

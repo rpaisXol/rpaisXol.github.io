@@ -1,5 +1,5 @@
 ---
-title: 집계함수 GROUP_CONCAT(), COUNT(DISTINCT), STDDEV(), VARIANCE()
+title: 15. 집계함수 GROUP_CONCAT(), COUNT(DISTINCT), STDDEV(), VARIANCE()
 created: 2026-10-19
 updated: 2026-10-19
 tags:

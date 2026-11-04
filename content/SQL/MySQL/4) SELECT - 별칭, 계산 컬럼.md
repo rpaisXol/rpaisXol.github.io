@@ -1,5 +1,5 @@
 ---
-title: SELECT - 별칭, 계산 컬럼
+title: 4. SELECT - 별칭, 계산 컬럼
 created: 2026-10-19
 updated: 2026-10-19
 tags:

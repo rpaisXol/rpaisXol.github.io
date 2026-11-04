@@ -1,5 +1,5 @@
 ---
-title: GROUP BY, HAVING절과 집계함수, ROLLUP
+title: 14. GROUP BY, HAVING절과 집계함수, ROLLUP
 created: 2026-10-19
 updated: 2026-10-19
 tags:

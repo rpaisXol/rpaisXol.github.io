@@ -1,5 +1,5 @@
 ---
-title: Recursive CTE(WITH 테이블)를 사용한 계층형 데이터
+title: 19. Recursive CTE(WITH 테이블)를 사용한 계층형 데이터
 created: 2026-10-19
 updated: 2026-10-19
 tags:

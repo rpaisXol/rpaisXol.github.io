@@ -1,5 +1,5 @@
 ---
-title: 윈도우범위(ROWS, RANGE)를 사용하는 윈도우 함수
+title: 18. 윈도우범위(ROWS, RANGE)를 사용하는 윈도우 함수
 created: 2026-10-19
 updated: 2026-10-19
 tags:
