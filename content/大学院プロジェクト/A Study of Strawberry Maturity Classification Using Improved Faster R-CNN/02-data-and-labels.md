@@ -3,7 +3,7 @@ title: "02. LabelMe 데이터와 누락된 673개 라벨"
 description: "소형 녹색 클래스 복구, COCO 좌표 변환과 이미지 단위 분할"
 ---
 
-[이전 · 논문과 문제 정의](./01-paper-and-problem.md) · [시리즈 목차](./index.md) · [다음 · 모델 연결](./03-detection-and-classification.md)
+[이전 · 논문과 문제 정의](./01-paper-and-problem.md) · [시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/) · [다음 · 모델 연결](./03-detection-and-classification.md)
 
 ## 원본 라벨에서 찾은 문제
 

@@ -3,7 +3,7 @@ title: "03. Faster R-CNN과 DenseNet-121 연결"
 description: "MobileNetV3-Large, RoI Align, 탐지 헤드와 분류 패치"
 ---
 
-[이전 · 데이터와 라벨](./02-data-and-labels.md) · [시리즈 목차](./index.md) · [다음 · 학습과 오류 해결](./04-training-and-debugging.md)
+[이전 · 데이터와 라벨](./02-data-and-labels.md) · [시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/) · [다음 · 학습과 오류 해결](./04-training-and-debugging.md)
 
 ## 탐지기에서 박스 구하기
 

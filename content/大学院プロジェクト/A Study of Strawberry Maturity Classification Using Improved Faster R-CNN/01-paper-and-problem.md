@@ -3,7 +3,7 @@ title: "01. 논문을 읽고 구현 범위를 정하기"
 description: "연구 문제, Faster R-CNN의 역할, 구현과 논문 설정의 경계"
 ---
 
-[시리즈 목차](./index.md) · [다음 · 데이터와 라벨](./02-data-and-labels.md)
+[시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/) · [다음 · 데이터와 라벨](./02-data-and-labels.md)
 
 ## 딸기의 위치와 성숙도를 함께 알아야 하는 이유
 

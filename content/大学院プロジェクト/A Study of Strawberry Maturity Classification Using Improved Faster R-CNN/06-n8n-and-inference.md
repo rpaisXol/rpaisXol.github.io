@@ -3,7 +3,7 @@ title: "06. n8n으로 보고서와 예측 사진 저장"
 description: "Python CLI를 연결하고 실제 이미지와 평가 파일을 저장하는 과정"
 ---
 
-[이전 · 평가와 결과](./05-evaluation-and-results.md) · [시리즈 목차](./index.md)
+[이전 · 평가와 결과](./05-evaluation-and-results.md) · [시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/)
 
 ## n8n과 Python이 맡는 역할
 
@@ -48,4 +48,4 @@ python workflow/run_stage.py evaluate --run-id example
 python workflow/run_stage.py image --run-id example
 ~~~
 
-[시리즈 첫 페이지로 돌아가기](./index.md)
+[시리즈 첫 페이지로 돌아가기](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/)

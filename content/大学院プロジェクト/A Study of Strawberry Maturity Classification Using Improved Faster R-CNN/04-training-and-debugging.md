@@ -3,7 +3,7 @@ title: "04. 학습 오류 해결과 최적 모델 선택"
 description: "PyTorch 스케줄러 오류, AMP와 누적 배치, 체크포인트 선택"
 ---
 
-[이전 · 모델 연결](./03-detection-and-classification.md) · [시리즈 목차](./index.md) · [다음 · 평가와 결과](./05-evaluation-and-results.md)
+[이전 · 모델 연결](./03-detection-and-classification.md) · [시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/) · [다음 · 평가와 결과](./05-evaluation-and-results.md)
 
 ## 탐지 학습이 끝난 뒤 분류기가 멈췄다
 

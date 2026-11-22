@@ -3,7 +3,7 @@ title: "05. mAP와 혼동행렬로 결과 해석"
 description: "IoU 매칭, 검증 지표, 논문 비교와 개선 실험"
 ---
 
-[이전 · 학습과 오류 해결](./04-training-and-debugging.md) · [시리즈 목차](./index.md) · [다음 · n8n과 예측 이미지](./06-n8n-and-inference.md)
+[이전 · 학습과 오류 해결](./04-training-and-debugging.md) · [시리즈 목차](https://rpaisxol.github.io/%E5%A4%A7%E5%AD%A6%E9%99%A2%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88/a-study-of-strawberry-maturity-classification-using-improved-faster-r-cnn/) · [다음 · n8n과 예측 이미지](./06-n8n-and-inference.md)
 
 ## 위치만 맞춘 경우와 성숙도까지 맞춘 경우
 
